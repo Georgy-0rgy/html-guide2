@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>pro hacker</title>
+<meta charset="UTF-8">
+
+</head>
+<body>
+<h1>html guide</h1>
+<p>Здесь вы узнаете как сделать страницу в 
+    <b>html</b> и как получить 10 от Виталика</p>
+<details>
+<summary>Команды</summary>
+<ol>
+
+
+
+<li>
+    <details>
+<summary><b>Какие команды нужно знать и что они делают?</b></summary>
+<br>
+<ol>
+<li>&lt;h1&gt; — heading (заголовок), самый большой и важный; &lt;h2&gt; чуть меньше, &lt;h3&gt; ещё меньше, &lt;h4&gt; мелкий заголовок, &lt;h5&gt; ещё более мелкий, &lt;h6&gt; наименее важный и маленький.
+<br><br>
+Пример использования:
+<pre><code>&lt;h1&gt;Главный заголовок&lt;/h1&gt;
+&lt;h2&gt;Раздел&lt;/h2&gt;
+&lt;h3&gt;Подраздел&lt;/h3&gt;</code></pre></li>
+
+<br><br><hr>
+
+<li>Чтобы сделать текст в HTML, вам надо использовать тег <code>&lt;p&gt;</code>.
+Вы вписываете свой текст между тегом <code>&lt;p&gt;</code> и <code>&lt;/p&gt;</code>.
+<br>
+Пример:
+<pre><code>&lt;p&gt;Ваш текст&lt;/p&gt;</code></pre></li>
+
+<br><br><hr>
+
+<li>
+&lt;title&gt; — задаёт название страницы (вкладки браузера); отображается во вкладке и в результатах поиска.
+
+Пример использования:
+<pre><code>&lt;head&gt;
+  &lt;title&gt;Мой сайт&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+</li>
+
+<br><br><hr>
+
+<li>
+<b>&lt;a&gt;</b> — это тег для создания ссылок. Буква "a" означает anchor (якорь).
+
+Он используется для перехода на другие страницы, сайты или файлы.
+
+Сам по себе тег не работает — ему нужен атрибут href.
+
+Пример использования:
+&lt;a href="https://google.com"&gt;Перейти в Google&lt;/a&gt;
+
+Текст между &lt;a&gt; и &lt;/a&gt; — это то, на что нажимают.
+
+</li>
+
+<br><br><hr>
+
+<li><b>&lt;img&gt;</b> — это тег для вставки изображения на страницу.
+
+У него нет закрывающего тега, потому что он одиночный.
+
+Чтобы картинка работала, нужно указать атрибут src (путь к изображению).
+
+Также желательно добавить alt — это текст, который показывается, если изображение не загрузилось.
+
+<br><br>
+Пример использования:
+&lt;img src="Название папки в которой лежит картинка/Название картинки.jpg" alt="Описание картинки"&gt;
+
+<br><br>
+
+src — путь к файлу 
+<br>
+alt — описание изображения</li>
+
+<br><br><hr>
+
+
+<li>
+Тег <code>&lt;br&gt;</code> используется для переноса строки (line break).  
+<i>Он не имеет закрывающего тега, потому что это одиночный элемент.</i> <br> 
+
+С его помощью можно перейти на новую строку внутри текста.
+<br><br>
+Пример использования:  
+<code>&lt;br&gt;</code>
+ 
+<code>Первая строка&lt;br&gt;Вторая строка</code>
+
+После <code>&lt;br&gt;</code> текст начнётся с новой строки.
+
+</li>
+
+<br><br><hr>
+
+<li>Тег <code>&lt;meta&gt;</code> — даёт браузеру информацию о странице (метаданные) и всегда пишется внутри <code>&lt;head&gt;</code>.  
+<br><br>
+
+Кодировка <code>UTF-8</code> используется, чтобы браузер правильно показывал все символы, включая русские, эмодзи и специальные знаки.
+<br><br>
+Пример использования:  
+<code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;</code></li>
+
+<br><br><hr>
+<li>Тег <code>&lt;style&gt;</code> используется для написания CSS прямо в HTML-документе и всегда находится внутри <code>&lt;head&gt;</code>.  
+С его помощью можно задавать стили для текста, кнопок, фонов и всего на странице.
+
+Пример использования:
+<br><br>
+<code>&lt;head&gt;
+    <br>
+  &lt;style&gt;
+    body { background-color: lightblue; }
+    <br><br>
+    h1 { color: darkblue; }
+    <br>
+  &lt;/style&gt;
+  <br>
+&lt;/head&gt;</code></li>
+
+
+
+
+
+
+
+</ol>
+    </details>
+</li>
+
+<hr>
+<li>
+<details>
+
+
+  
+<summary><b>Конкретнее про style</b></summary>
+
+<p>Тег <code>&lt;style&gt;</code> позволяет делать страницу красивее — менять цвета, 
+    шрифты, размеры и другие визуальные элементы прямо в HTML.</p>
+
+<p>Тег <code>&lt;style&gt;</code> пишется внутри <code>&lt;head&gt;</code>.  
+
+После него указываешь, что хочешь стилизовать (например <code>p</code>), потом фигурные скобки <code>{ }</code> и внутри ставишь команды.  
+
+Пример:  
+<code>&lt;style&gt;
+  p { color: red; } &lt;-- одна из команд
+&lt;/style&gt;</code>
+
+Внутри <code>&lt;style&gt;&lt;/style&gt;</code> можно вместить сколько угодно таких команд и сколько угодно элементов, которые хочешь сделать красивыми.  
+Не нужно создавать много тегов <code>&lt;style&gt;</code> — одного достаточно для всей страницы.</p>
+
+
+    <br>
+
+<p>Примеры нужных команд (простых)</p>
+
+<ol>
+<li>Команда <code>font-size</code> задаёт размер текста.  
+
+Правильно пишется внутри фигурных скобок, после названия элемента:  
+
+Пример:  
+<code>p { font-size: 50px; }</code>  
+<br><br>
+Размер указывается в пикселях (<code>px</code>). Можно менять любое число, чтобы текст стал больше или меньше.</li>
+
+
+<br><br><hr>
+
+<li>Команда <code>color</code> задаёт цвет текста.  
+
+Правильно пишется внутри фигурных скобок, после названия элемента:  
+
+<br><br>
+Пример:  
+<code>p { color: red; }</code>  
+<br><br>
+Вместо <code>red</code> можно использовать любой цвет: название (<code>blue</code>), HEX (<code>#FF0000</code>) или RGB (<code>rgb(255,0,0)</code>).</li>
+
+<br><br><hr>
+
+<li>Команда <code>background-color</code> задаёт цвет фона элемента.  
+<br>
+Правильно пишется внутри фигурных скобок, после названия элемента:  
+<br><br>
+Пример:  
+<code>p { background-color: yellow; }</code>  
+<br><br>
+Вместо <code>yellow</code> можно использовать название цвета, HEX (<code>#FFFF00</code>) или RGB (<code>rgb(255,255,0)</code>).</li>
+
+
+
+
+</ol>
+  </li>
+</details>
+
+
+
+
+</ol>
+</details>
+
+<hr>
+
+<details>
+<summary>Куда что вставлять?</summary>
+<ol>
+<li>
+
+
+
+    <details>
+
+<summary><b>head</b></summary>
+<br><br>
+<ol>
+<li>&lt;title&gt; — задаёт название страницы (вкладка браузера)</li>  
+
+    <br><br>
+
+<li>&lt;meta charset="UTF-8"&gt; — указывает кодировку страницы, чтобы отображались все символы, включая русские</li> 
+
+<br><br>
+
+<li>&lt;style&gt; — сюда пишем CSS, чтобы задавать стили для текста, фонов, кнопок и других элементов</li>
+</ol>
+
+
+    </details>
+</li>
+
+
+<hr>
+
+
+<li>
+    <details>
+<summary><b>body</b></summary>
+<br><br>
+<ol>
+<li>&lt;h1&gt; — заголовки, от &lt;h1&gt; (самый большой) до &lt;h6&gt; (самый маленький)</li>  
+
+<br><br>
+
+<li>&lt;p&gt; — абзацы текста</li>  
+<br><br>
+<li>&lt;a href="..."&gt; — ссылки на другие страницы или сайты</li>
+<br><br>  
+<li>&lt;img src="..." alt="..."&gt; — вставка изображений</li> 
+<br><br> 
+<li>&lt;br&gt; — перенос строки</li>
+
+
+
+</ol>
+    </details>
+</li>
+
+
+</ol>
+</details>
+
+<hr>
+
+<details>
+
+<summary>Каркас</summary>
+
+<img src="img/1.png"karkas>
+
+
+</details>
+
+
+<hr>
+
+
+<details>
+
+<summary>Примечания</summary>
+
+<p>Мы работаем в программе <a href="#" onclick="openModal('img/0.png')">visual studio code</a></p>
+<!-- Модальное окно -->
+<div id="myModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+     background-color: rgba(0,0,0,0.7); justify-content:center; align-items:center;">
+  <span style="position:absolute; top:10px; right:20px; font-size:30px; color:white; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <img id="modalImg" src="" style="max-width:80%; max-height:80%; border:5px solid white;">
+</div>
+
+<script>
+function openModal(src){
+  document.getElementById('modalImg').src = src;
+  document.getElementById('myModal').style.display = 'flex';
+}
+function closeModal(){
+  document.getElementById('myModal').style.display = 'none';
+}
+</script>
+
+<p>
+Для начала нужно создать отдельную папку в которой вы будете работать. 
+После этого, вы переходите в visual studio code и выбираете её. 
+Далее вам нужно создать внутри этой папки ещё папки для css и img. 
+Для этого вам нужно нажать 
+<a href="#" onclick="openModal('img/3.png')">сюда</a>.
+</p>
+
+<p>
+После создания папок вам нужно создать сам html документ который вы должны назвать 
+"любое слово.html". Для этого вам нужно нажимать 
+<a href="#" onclick="openModal('img/2.png')">сюда</a>.
+</p>
+
+<p>
+Так же для того что бы было удобнее пользоваться программой, вы можете установить плагин 
+<a href="#" onclick="openModal('img/4.png')">live preview</a>. 
+Для этого вам нужно зайти 
+<a href="#" onclick="openModal('img/5.png')">сюда</a> 
+и вбить в поиске название которое было указано выше. После установки вы можете нажать на свой html файл правой кнопкой мыши и выбрать show preview.
+</p>
+
+<!-- Модальное окно -->
+<div id="myModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+background-color: rgba(0,0,0,0.7); justify-content:center; align-items:center;">
+  
+  <span style="position:absolute; top:10px; right:20px; font-size:30px; color:white; cursor:pointer;" 
+  onclick="closeModal()">&times;</span>
+  
+  <img id="modalImg" src="" 
+  style="max-width:80%; max-height:80%; border:5px solid white;">
+</div>
+
+<script>
+function openModal(src){
+  document.getElementById('modalImg').src = src;
+  document.getElementById('myModal').style.display = 'flex';
+}
+function closeModal(){
+  document.getElementById('myModal').style.display = 'none';
+}
+</script>
+
+
+</details>
+
+
+</body>
+</html>
