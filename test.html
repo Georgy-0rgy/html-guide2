@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Тест по HTML</title>
+
+<style>
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+/* Тёмная тема */
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Вопросы */
+.question {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #eee;
+  transition: 0.3s;
+}
+
+body.dark .question {
+  background-color: #1e1e1e;
+}
+
+/* Радио кнопки и подписи */
+label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* Подсветка ответов */
+.correct {
+  background-color: #4CAF50; /* зеленый */
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.incorrect {
+  background-color: #f44336; /* красный */
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Кнопка Проверить */
+#checkButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #2196F3;
+  color: white;
+  transition: 0.3s;
+}
+
+#checkButton:hover {
+  background-color: #1976d2;
+}
+
+/* Кнопка темы */
+#themeButton {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #ffb7a5;
+  color: black;
+  transition: 0.3s;
+}
+
+body.dark #themeButton {
+  background-color: #ffa07a;
+  color: black;
+}
+
+/* Кнопка Домой */
+#homeButton {
+  position: fixed;
+  bottom: 15px;
+  left: 20px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #2196F3;
+  color: white;
+  transition: 0.3s;
+}
+
+#homeButton:hover {
+  background-color: #1976d2;
+}
+</style>
+</head>
+<body>
+
+<h1>Тест по HTML</h1>
+
+<!-- Вопросы -->
+<div class="question" data-correct="b">
+  <p>1. Какой тег используется для заголовка самого большого размера?</p>
+  <label><input type="radio" name="q1" value="a"> &lt;h6&gt;</label>
+  <label><input type="radio" name="q1" value="b"> &lt;h1&gt;</label>
+  <label><input type="radio" name="q1" value="c"> &lt;h3&gt;</label>
+</div>
+
+<div class="question" data-correct="c">
+  <p>2. Какой тег используется для вставки изображения на страницу?</p>
+  <label><input type="radio" name="q2" value="a"> &lt;p&gt;</label>
+  <label><input type="radio" name="q2" value="b"> &lt;a&gt;</label>
+  <label><input type="radio" name="q2" value="c"> &lt;img&gt;</label>
+</div>
+
+<div class="question" data-correct="b">
+  <p>3. Какой атрибут тега &lt;a&gt; задаёт ссылку?</p>
+  <label><input type="radio" name="q3" value="a"> src</label>
+  <label><input type="radio" name="q3" value="b"> href</label>
+  <label><input type="radio" name="q3" value="c"> link</label>
+</div>
+
+<div class="question" data-correct="b">
+  <p>4. Какой тег используется для создания абзаца текста?</p>
+  <label><input type="radio" name="q4" value="a"> &lt;div&gt;</label>
+  <label><input type="radio" name="q4" value="b"> &lt;p&gt;</label>
+  <label><input type="radio" name="q4" value="c"> &lt;span&gt;</label>
+</div>
+
+<div class="question" data-correct="b">
+  <p>5. Для чего нужен атрибут alt у тега &lt;img&gt;?</p>
+  <label><input type="radio" name="q5" value="a"> Чтобы текст был жирным</label>
+  <label><input type="radio" name="q5" value="b"> Для альтернативного текста, если картинка не загрузилась</label>
+  <label><input type="radio" name="q5" value="c"> Чтобы добавить ссылку</label>
+</div>
+
+<!-- Шуточные вопросы -->
+<div class="question" data-correct="b">
+  <p>6. Что произойдет, если написать &lt;h1&gt;Я программист&lt;/h1&gt; на сайте?</p>
+  <label><input type="radio" name="q6" value="a"> Вся страница взорвётся 💥</label>
+  <label><input type="radio" name="q6" value="b"> На странице появится большой заголовок с текстом</label>
+  <label><input type="radio" name="q6" value="c"> Браузер начнет говорить</label>
+</div>
+
+<div class="question" data-correct="a">
+  <p>7. Если забыть закрыть &lt;p&gt; и написать ещё один &lt;p&gt; — что случится?</p>
+  <label><input type="radio" name="q7" value="a"> Браузер сам закроет предыдущий абзац</label>
+  <label><input type="radio" name="q7" value="b"> Текст исчезнет навсегда</label>
+  <label><input type="radio" name="q7" value="c"> HTML превратится в CSS</label>
+</div>
+
+<div class="question" data-correct="a">
+  <p>8. Что будет, если вместо &lt;img src="cat.jpg"&gt; вставить &lt;img src="dog.jpg"&gt;?</p>
+  <label><input type="radio" name="q8" value="a"> Появится картинка с собакой</label>
+  <label><input type="radio" name="q8" value="b"> Появится кот</label>
+  <label><input type="radio" name="q8" value="c"> В интернет придет конец света</label>
+</div>
+
+<div class="question" data-correct="b">
+  <p>9. Какой тег лучше использовать, чтобы браузер не понял что вы делаете и удивился?</p>
+  <label><input type="radio" name="q9" value="a"> &lt;head&gt;</label>
+  <label><input type="radio" name="q9" value="b"> &lt;marquee&gt;</label>
+  <label><input type="radio" name="q9" value="c"> &lt;footer&gt;</label>
+</div>
+
+<div class="question" data-correct="b">
+  <p>10. Если поставить &lt;b&gt; на слово “важно”, это:</p>
+  <label><input type="radio" name="q10" value="a"> Сделает слово суперсекретным</label>
+  <label><input type="radio" name="q10" value="b"> Сделает его жирным</label>
+  <label><input type="radio" name="q10" value="c"> Превратит его в ссылку</label>
+</div>
+
+<button id="checkButton">Проверить</button>
+<button id="themeButton" onclick="toggleTheme()">🌙 / ☀️</button>
+<button id="homeButton" onclick="location.href='index.html'">🏠</button>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+}
+
+// Проверка ответов
+document.getElementById('checkButton').addEventListener('click', function() {
+  const questions = document.querySelectorAll('.question');
+  questions.forEach(q => {
+    const correct = q.dataset.correct;
+    const selected = q.querySelector('input[type="radio"]:checked');
+    
+    // Сначала убираем классы
+    q.querySelectorAll('label').forEach(label => {
+      label.classList.remove('correct', 'incorrect');
+    });
+    
+    if(selected){
+      if(selected.value === correct){
+        selected.parentElement.classList.add('correct');
+      } else {
+        selected.parentElement.classList.add('incorrect');
+        // Подсветка правильного ответа
+        q.querySelectorAll('input').forEach(input => {
+          if(input.value === correct){
+            input.parentElement.classList.add('correct');
+          }
+        });
+      }
+    } else {
+      // Если не выбрано ничего, подсветка правильного ответа
+      q.querySelectorAll('input').forEach(input => {
+        if(input.value === correct){
+          input.parentElement.classList.add('correct');
+        }
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
