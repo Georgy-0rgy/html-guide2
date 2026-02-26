@@ -8,9 +8,74 @@
 content="width=device-width,initial-scale=1.0">
 <meta name="description" content="Гайд по HTML для новичков"> <!-- описание страницы -->
   
+<style>
+body {
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
 
+body.dark {
+  background-color: #111;
+  color: white;
+}
+
+.theme-button {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+/* Светлый режим */
+body:not(.dark) .theme-button {
+  background-color: #222;
+  color: white;
+}
+
+body:not(.dark) .theme-button:hover {
+  background-color: #444;
+}
+
+/* Светлый режим: ссылки чуть светлее при наведении */
+body:not(.dark) a:hover {
+  color: #555; /* можно поменять на любой светлый оттенок */
+}
+
+/* Тёмный режим */
+body.dark .theme-button {
+  background-color: #f5f5f5;
+  color: black;
+}
+
+body.dark .theme-button:hover {
+  background-color: #ddd;
+}
+
+body.dark a { color: #ffb7a5; }
+body.dark a:hover { color: #ffc9b8; }
+
+
+
+</style>
+
+
+  
 </head>
 <body>
+
+<button class="theme-button" 
+        onclick="toggleTheme()" 
+       >
+🌙
+</button>
+
+  
 <h1>html guide</h1>
 <p>Здесь вы узнаете как сделать страницу в 
     <b>html</b> и как получить 10 от Виталика</p>
@@ -366,6 +431,7 @@ background-color: rgba(0,0,0,0.7); justify-content:center; align-items:center;">
   style="max-width:80%; max-height:80%; border:5px solid white;">
 </div>
 
+  
 <script>
 function openModal(src){
   document.getElementById('modalImg').src = src;
@@ -379,9 +445,31 @@ function closeModal(){
 
 </details>
 
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+  updateIcon();
+}
+
+function updateIcon() {
+  const btn = document.querySelector(".theme-button");
+  if (document.body.classList.contains("dark")) {
+    btn.textContent = "☀️";
+  } else {
+    btn.textContent = "🌙";
+  }
+}
+
+/* Проверка при загрузке */
+updateIcon();
+</script>
+
+
+  
 
 </body>
 
 </html>
+
 
 
