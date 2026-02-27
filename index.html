@@ -412,6 +412,126 @@ alt — описание изображения
 
 </ol>
   </li>
+
+<hr>
+
+  
+<li><details>
+<summary><b>Таблицы</b></summary>
+
+
+  <br><br>
+<p><b>&lt;table&gt;</b> — используется для создания таблицы.
+
+Основные теги таблицы:</p>
+
+<br><br>
+
+<p><b>&lt;tr&gt;</b> — строка таблицы (table row)</p>  
+<br>
+<p><b>&lt;td&gt;</b> — обычная ячейка (table data)</p>  
+<br>
+<p><b>&lt;th&gt;</b> — заголовочная ячейка (table header)</p>
+
+<br><br>
+<p><b>Пример простой таблицы:</b></p>
+<br><br>
+
+<pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Имя&lt;/th&gt;
+    &lt;th&gt;Возраст&lt;/th&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;Алекс&lt;/td&gt;
+    &lt;td&gt;18&lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;Мария&lt;/td&gt;
+    &lt;td&gt;19&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+<hr><br>
+
+<p>Можно добавить рамку с помощью атрибута border:</p>
+
+<p><pre><code>&lt;table border="1"&gt;</code></pre></p>
+
+
+
+<hr><br>
+
+<p><b>colspan</b> — объединяет ячейки по горизонтали.</p>
+
+<p>Пример:</p>
+
+<p><pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="2"&gt;Общий заголовок&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre></p>
+
+<hr><br>
+
+<p><b>rowspan</b> — объединяет ячейки по вертикали.</p>
+
+<p>Пример:</p>
+
+<p><pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Общий блок&lt;/td&gt;
+    &lt;td&gt;A&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;B&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre></p>
+
+<hr><br>
+
+<h3>Стилизация таблицы (CSS)</h3>
+
+<p>Пример стилей внутри &lt;style&gt;:</p>
+
+<p><pre><code>table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: lightgray;
+}</code></pre></p>
+
+<p><b>border-collapse: collapse;</b> — убирает двойные границы между ячейками и делает их одной линией.</p>
+
+<p><b>width: 100%;</b> — таблица растягивается на всю ширину страницы.</p>
+
+<p><b>padding</b> — отступ внутри ячеек.</p>
+
+<p><b>text-align</b> — выравнивание текста.</p>
+
+
+
+
+
+</details></li>
+
+
+
+  
 </details>
 
 
@@ -470,6 +590,21 @@ alt — описание изображения
 <br><br> 
 <li>&lt;br&gt; — перенос строки</li>
 
+  <br><br>
+  
+<li>&lt;table&gt; — создаёт таблицу</li>
+
+<br><br>
+
+<li>&lt;tr&gt; — строка таблицы</li>
+
+<br><br>
+
+<li>&lt;th&gt; — заголовочная ячейка</li>
+
+<br><br>
+
+<li>&lt;td&gt; — обычная ячейка таблицы</li>
 
 
 </ol>
@@ -624,6 +759,7 @@ function updateBurgerColor() {
 </body>
 
 </html>
+
 
 
 
